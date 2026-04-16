@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Trinity 메일 도우미 · 개인정보 처리방침</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    font-family: -apple-system, "Malgun Gothic", "맑은 고딕", sans-serif;
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 48px 24px;
+    color: #333;
+    line-height: 1.7;
+    background: #fafafa;
+  }
+  h1 {
+    font-size: 24px;
+    border-bottom: 2px solid #c08878;
+    padding-bottom: 12px;
+    margin-bottom: 8px;
+  }
+  .subtitle {
+    color: #888;
+    font-size: 13px;
+    margin-bottom: 36px;
+  }
+  h2 {
+    font-size: 17px;
+    color: #4a4240;
+    margin-top: 32px;
+    padding-left: 12px;
+    border-left: 3px solid #c8b490;
+  }
+  p, li { font-size: 14px; color: #555; }
+  ul { padding-left: 20px; }
+  li { margin-bottom: 6px; }
+  .tight { margin: 4px 0; }
+  code {
+    background: #f0ebe5;
+    color: #c08878;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-size: 13px;
+  }
+  footer {
+    margin-top: 48px;
+    padding-top: 20px;
+    border-top: 1px solid #e5ddd4;
+    font-size: 12px;
+    color: #999;
+    text-align: center;
+  }
+  .last-updated {
+    background: #f5efe9;
+    padding: 10px 14px;
+    border-radius: 6px;
+    font-size: 13px;
+    color: #6b5a50;
+    margin-bottom: 24px;
+  }
+</style>
+</head>
+<body>
+
+<h1>Trinity 메일 도우미</h1>
+<div class="subtitle">Privacy Policy (개인정보 처리방침)</div>
+
+<div class="last-updated">
+  <b>최종 수정일:</b> 2026년 4월 16일
+</div>
+
+<h2>1. 개요</h2>
+<p>
+  본 문서는 Chrome 확장 프로그램 <b>"Trinity 메일 도우미"</b>(이하 "본 확장")의 개인정보 수집 및 처리 방침을 설명합니다.
+  본 확장은 그룹웨어 메일 발송 전 확인창을 표시하여 사용자의 실수를 방지하는 생산성 도구입니다.
+</p>
+
+<h2>2. 수집하는 정보</h2>
+<p>본 확장은 사용자의 어떠한 개인정보도 수집, 저장, 전송하지 않습니다.</p>
+<p>다음 정보들은 오직 <b>사용자의 로컬 브라우저 내부</b>에서만 처리됩니다:</p>
+<ul>
+  <li class="tight">메일 작성 화면의 본문 텍스트 — 첨부파일 키워드 감지 목적으로만 읽으며, 외부로 전송되지 않습니다.</li>
+  <li class="tight">첨부파일 개수 — 리마인더 판정 목적으로만 사용되며, 파일 내용이나 파일명은 수집하지 않습니다.</li>
+  <li class="tight">사용자 설정값 (확인 대기 시간, 체크 문구, 감지 키워드 등) — Chrome의 <code>chrome.storage.local</code> API를 통해 사용자 본인의 브라우저에만 저장됩니다.</li>
+</ul>
+
+<h2>3. 외부 서버로의 데이터 전송</h2>
+<p>
+  본 확장은 기본적으로 어떠한 외부 서버로도 데이터를 전송하지 않습니다.
+</p>
+<p>
+  단, 사용자가 선택적으로 활성화할 수 있는 AI 메일 요약 기능을 사용할 경우에 한하여,
+  해당 메일의 본문 내용이 Anthropic Claude API(<code>api.anthropic.com</code>)로 전송됩니다.
+  이 기능은 사용자가 자신의 API 키를 직접 입력하고 명시적으로 "요약" 버튼을 클릭했을 때만 동작하며,
+  Anthropic의 <a href="https://www.anthropic.com/legal/privacy" target="_blank">개인정보 처리방침</a>이 적용됩니다.
+</p>
+
+<h2>4. 권한 사용 목적</h2>
+<ul>
+  <li class="tight"><b>storage</b> — 사용자 설정을 브라우저 로컬에 저장하기 위함</li>
+  <li class="tight"><b>host_permissions (api.anthropic.com)</b> — AI 요약 기능 사용 시 Claude API 호출을 위함 (선택 기능)</li>
+  <li class="tight"><b>content_scripts (sonotrinitygroup.com)</b> — 그룹웨어 페이지에서 확인창을 표시하기 위함</li>
+</ul>
+
+<h2>5. 제3자 제공</h2>
+<p>
+  본 확장은 사용자 정보를 어떠한 제3자에게도 제공, 판매, 공유하지 않습니다.
+</p>
+
+<h2>6. 광고 및 추적</h2>
+<p>
+  본 확장은 광고를 표시하지 않으며, 사용자의 행동을 추적하지 않습니다.
+  Google Analytics 등 분석 도구도 사용하지 않습니다.
+</p>
+
+<h2>7. 데이터 삭제</h2>
+<p>
+  본 확장을 Chrome에서 제거하면, 저장된 모든 설정값이 자동으로 삭제됩니다.
+  별도의 삭제 요청 절차는 필요하지 않습니다.
+</p>
+
+<h2>8. 변경 사항</h2>
+<p>
+  본 방침은 예고 없이 변경될 수 있으며, 중요한 변경 사항은 본 페이지 상단의 "최종 수정일"을 통해 고지됩니다.
+</p>
+
+<h2>9. 문의</h2>
+<p>
+  본 확장 또는 본 개인정보 처리방침에 관한 문의는 다음 이메일로 연락 주시기 바랍니다.
+</p>
+<p>
+  <b>mc_plan@trinityairways.com</b>
+</p>
+
+<footer>
+  © 2026 Trinity Airways · Maintenance Production Planning
+</footer>
+
+</body>
+</html>
